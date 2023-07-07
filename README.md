@@ -11,5 +11,5 @@ Sistem bodovanja: Implementirajte sistem bodovanja koji će dodeljivati odgovara
 Prikaz rezultata: Na osnovu sistema bodovanja, prikažite tabelu sa rezultatima fudbalskog turnira. Tabela treba da prikaže rangiranje timova na osnovu osvojenih bodova.
 
 ## Login
-admin@gmail.com
+admin@gmail.com <br>
 Admin12#
