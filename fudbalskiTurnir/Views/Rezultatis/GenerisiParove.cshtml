@@ -1,0 +1,56 @@
+﻿@model IEnumerable<fudbalskiTurnir.Models.Rezultati>
+
+@{
+    ViewData["Title"] = "GenerisiParove";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GenerisiParove</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tim1Golovi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tim2Golovi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tim1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tim2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tim1Golovi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tim2Golovi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tim1.Naziv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tim2.Naziv)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdRez">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdRez">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdRez">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>

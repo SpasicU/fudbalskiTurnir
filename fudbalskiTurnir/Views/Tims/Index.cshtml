@@ -1,0 +1,50 @@
+﻿@model IEnumerable<fudbalskiTurnir.Models.Tim>
+
+@{
+    ViewData["Title"] = "Timovi";
+}
+
+<h1>Tabela timova</h1>
+
+<p>
+    <a asp-action="Create">Unesi novi tim</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTima)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bodovi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTima)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bodovi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdTima">Ažuriraj</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdTima">Izbriši</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@if (ViewBag.Tim!= null)
+{
+    <p><b>@ViewBag.Tim</b></p>
+}

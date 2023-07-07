@@ -1,0 +1,61 @@
+﻿@model IEnumerable<fudbalskiTurnir.Models.Rezultati>
+
+@{
+    ViewData["Title"] = "Rezultati";
+}
+
+<h1>Rezultati</h1>
+
+
+<p>
+    <a asp-action="Create">Unesi nov rezultat utakmice</a>
+</p>
+<p>
+    <a asp-controller="Tims" asp-action="Index">Pogledaj tabelu</a>
+</p>
+<form action="/Rezultatis/GenerisiParove" method="post">
+    <button type="submit" class="btn btn-success">Odigraj turnir!</button>
+</form>
+<p><b>@ViewBag.Rezultati</b></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Domaćin
+            </th>
+            <th>
+                Gost
+            </th>
+            <th>
+                Domaćin golovi
+            </th>
+            <th>
+                Gost golovi
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tim1.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tim2.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tim1Golovi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tim2Golovi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdRez">Ažuriraj</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdRez">Izbriši</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

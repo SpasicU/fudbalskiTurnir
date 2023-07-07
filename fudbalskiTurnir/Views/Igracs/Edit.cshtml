@@ -1,0 +1,39 @@
+﻿@model fudbalskiTurnir.Models.Igrac
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Ažuriraj</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdIgrac" />
+            <div class="form-group">
+                <label asp-for="ImeIgraca" class="control-label">Igrač</label>
+                <input asp-for="ImeIgraca" class="form-control" />
+                <span asp-validation-for="ImeIgraca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTima" class="control-label">Tim</label>
+                <select asp-for="IdTima" class="form-control" asp-items="ViewBag.IdTima"></select>
+                <span asp-validation-for="IdTima" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Sačuvaj izmene" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Nazad</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

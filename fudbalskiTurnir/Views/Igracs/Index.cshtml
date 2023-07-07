@@ -1,0 +1,40 @@
+﻿@model IEnumerable<fudbalskiTurnir.Models.Igrac>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Igrači</h1>
+
+<p>
+    <a asp-action="Create">Kreiraj novog</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ime igrača
+            </th>
+            <th>
+                Tim igrača
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImeIgraca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTimaNavigation.Naziv)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdIgrac">Ažuriraj</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdIgrac">Izbriši</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

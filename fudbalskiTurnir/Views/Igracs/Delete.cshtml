@@ -1,0 +1,15 @@
+﻿@model fudbalskiTurnir.Models.Igrac
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Da li si siguran da želiš obrisati igrača?</h3>
+<div>
+    <hr />   
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdIgrac" />
+        <input type="submit" value="Izbriši" class="btn btn-danger" /> |
+        <a asp-action="Index">Nazad</a>
+    </form>
+</div>

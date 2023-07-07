@@ -1,0 +1,50 @@
+﻿@model fudbalskiTurnir.Models.Rezultati
+
+@{
+    ViewData["Title"] = "Ažuriraj";
+}
+
+<h1>Ažuriraj rezultat</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdRez" />
+            <div class="form-group">
+                <label asp-for="Tim1Id" class="control-label">Domaćin</label>
+                <select asp-for="Tim1Id" class="form-control" asp-items="ViewBag.Tim1Id"></select>
+                <span asp-validation-for="Tim1Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tim2Id" class="control-label">Gost</label>
+                <select asp-for="Tim2Id" class="form-control" asp-items="ViewBag.Tim2Id"></select>
+                <span asp-validation-for="Tim2Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tim1Golovi" class="control-label">Domaćin golovi</label>
+                <input asp-for="Tim1Golovi" class="form-control" />
+                <span asp-validation-for="Tim1Golovi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tim2Golovi" class="control-label">Gost golovi</label>
+                <input asp-for="Tim2Golovi" class="form-control" />
+                <span asp-validation-for="Tim2Golovi" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Sačuvaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Nazad</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

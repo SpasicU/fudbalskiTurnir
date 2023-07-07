@@ -1,0 +1,17 @@
+﻿@model fudbalskiTurnir.Models.Tim
+
+@{
+    ViewData["Title"] = "Briši";
+}
+
+<h4>Da li si siguran da želiš obrisati ovaj tim?</h4>
+<hr />
+
+<div>
+    <form asp-action="Delete">
+        <br />
+        <input type="hidden" asp-for="IdTima" />
+        <input type="submit" value="Obriši" class="btn btn-danger" /> |
+        <a asp-action="Index">Nazad</a>
+    </form>
+</div>
