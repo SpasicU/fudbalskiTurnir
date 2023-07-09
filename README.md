@@ -1,24 +1,24 @@
 # Fudbalski Turnir
 
 ## Opis zadatka:
-Razvijte aplikaciju za fudbalski turnir koristeći MVC .NET CORE tehnologiju i SQL Express bazu podataka. Aplikacija treba da omogući logovanje administratora koji će unositi timove, igrače i rezultate. Takođe, aplikacija treba da pruži funkcionalnosti za pregled, unos, izmenu i brisanje timova, igrača i rezultata.
+Razvijena je aplikacija za fudbalski turnir koristeći MVC .NET CORE tehnologiju i SQL Express bazu podataka. Aplikacija omogućava logovanje administratora koji unosi timove, igrače i rezultate. Takođe, aplikacija pruža funkcionalnosti za pregled, unos, izmenu i brisanje timova, igrača i rezultata. Takođe je moguće i moguće odigrati turnir koji će se automatski generisati sa rezultatima utakmica.
 
 ## Glavne funkcije aplikacije:
 <ul>
   <li>
-    <b>Logovanje administratora</b>: Implementirajte sistem za logovanje administratora u aplikaciju koji će omogućiti unos svih potrebnih informacija o timovima, igračima i rezultatima.
+    <b>Logovanje administratora</b>: Implementiran je sistem za logovanje administratora u aplikaciju koji će omogućiti unos svih potrebnih informacija o timovima, igračima i rezultatima.
   </li>
   <li>
-    <b>Upravljanje entitetima</b>: Omogućite funkcionalnosti za pregled, unos, izmenu i brisanje timova, igrača i rezultata. Administrator treba da ima kontrolu nad ovim entitetima u aplikaciji.
+    <b>Upravljanje entitetima</b>: Omogućene su funkcionalnosti za pregled, unos, izmenu i brisanje timova, igrača i rezultata. Administrator ima kontrolu nad ovim entitetima u aplikaciji.
   </li>
   <li>
-    <b>Generisanje parova</b>: Kreirajte sistem koji će automatski generisati parove za sve timove, tako da odigraju utakmicu međusobno. Za svaku odigranu utakmicu, timovi trebaju da dobiju poene. Raspon golova za svaku utakmicu treba da bude od 0 do 5.
+    <b>Generisanje parova</b>: Kreiran je sistem koji automatski generiše parove za sve timove, tako da odigraju utakmicu međusobno. Za svaku odigranu utakmicu, timovi dobijaju poene. 
   </li>
   <li>
-    <b>Sistem bodovanja</b>: Implementirajte sistem bodovanja koji će dodeljivati odgovarajuće bodove pobednicima, remijima i poraženim timovima. Pobednik utakmice treba da dobije 3 boda, remi donosi 1 bod, dok poraženi tim ne dobija bodove.
+    <b>Sistem bodovanja</b>: Implementiran je sistem bodovanja koji dodeljuje odgovarajuće bodove pobednicima, remijima i poraženim timovima. Pobednik utakmice dobija 3 boda, remi donosi 1 bod, dok poraženi tim ne dobija bodove.
   </li>
   <li>
-    <b>Prikaz rezultata</b>: Na osnovu sistema bodovanja, prikažite tabelu sa rezultatima fudbalskog turnira. Tabela treba da prikaže rangiranje timova na osnovu osvojenih bodova.
+    <b>Prikaz rezultata</b>: Na osnovu sistema bodovanja, prikazana je tabela sa rezultatima fudbalskog turnira. Tabela prikazuje rangiranje timova na osnovu osvojenih bodova.
   </li>
 </ul>
 
